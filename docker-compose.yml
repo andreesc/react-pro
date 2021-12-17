@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build:
+      args:
+        user: andres
+        uid: 501
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - '.:/app'
+    ports:
+      - "3000:3000"
